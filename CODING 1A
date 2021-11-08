@@ -1,0 +1,43 @@
+package Assignment;
+
+import java.util.Scanner;
+
+public class q1b {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		double interestrate; //declare interest rate
+		double loanamount;// declare loan amount
+		int years; //declare years
+		double total;
+		double monthly;
+		double alltotal;
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("Enter the  yearly interest rate,for example,3.5:"); //state the yearly interest rate
+		interestrate = scan.nextDouble();
+
+		System.out.println("Enter the number of years as an integer,for example,5:" ); //state the number of years
+		years = scan.nextInt();
+
+		System.out.print("Enter the loan amount,for example,3000.00:"); // state the number of loan amount
+		loanamount = scan.nextDouble();
+
+
+		total=(interestrate/100)*loanamount*years; 
+		monthly=(interestrate/100)*loanamount;
+		alltotal=monthly*(years*12);
+
+		System.out.printf("The monthly payment is : $%.2f" , monthly);
+		System.out.println("");
+		System.out.printf("The total payment is : $%.2f" , alltotal);
+		
+			
+		
+
+	}
+
+}
