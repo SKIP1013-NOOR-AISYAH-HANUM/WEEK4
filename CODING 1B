@@ -1,0 +1,64 @@
+package Assignment;
+
+import java.util.Scanner;
+
+public class q1a {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner input = new Scanner(System.in);
+		
+		double numitem;
+		double firstitem,seconditem,thirditem;
+		double firstqua,secqua,thirdqua=0;
+		double price;
+		double total;
+		double discount=0;
+		double alltotal;
+		double totalfirst,totalsec,totalthird;
+		
+
+	
+		System.out.print("Enter number of items: ");
+		numitem = input.nextDouble();
+	    System.out.print("Enter price of first item:RM");
+	    firstitem = input.nextDouble();
+		System.out.print("Enter quantity of first item: ");
+		firstqua = input.nextDouble();
+		totalfirst = firstitem*firstqua;
+		System.out.println("");
+			
+	    System.out.print("Enter price of second item:RM");
+	    seconditem = input.nextDouble();
+		System.out.print("Enter quantity of second item: ");
+		secqua = input.nextDouble();
+		totalsec = seconditem*secqua;
+		System.out.println("");
+		
+		System.out.print("Enter price of third item:RM");
+		thirditem = input.nextDouble();
+		System.out.print("Enter quantity of third item: ");
+		thirdqua = input.nextDouble();
+		totalthird = thirditem*thirdqua;
+		System.out.println("");
+		
+		total = totalfirst+totalsec+totalthird;
+		
+		if (total>100)
+		{	
+			discount = 0.2*total;
+		}    
+	    else
+	    {	
+	    	discount = 0.1*total;
+	    }
+	       
+		alltotal = total-discount;
+		        
+        System.out.println("\nTotal price : RM"+total);
+        System.out.println("Discount received : RM"+discount);
+        System.out.println("Price to be paid : RM"+alltotal);
+
+	}
+
+}
